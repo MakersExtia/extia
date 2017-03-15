@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "navigation_pro")
+set(navigation_pro_MAINTAINER "monica <monica@todo.todo>")
+set(navigation_pro_DEPRECATED "")
+set(navigation_pro_VERSION "0.0.0")
+set(navigation_pro_BUILD_DEPENDS "costmap_2d" "dynamic_reconfigure" "roscpp")
+set(navigation_pro_RUN_DEPENDS "costmap_2d" "dynamic_reconfigure" "roscpp")
+set(navigation_pro_BUILDTOOL_DEPENDS "catkin")

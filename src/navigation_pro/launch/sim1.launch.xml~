@@ -1,0 +1,44 @@
+<launch>
+
+<node name="hokuyo" pkg="hokuyo_node" type="hokuyo_node">
+   <param name="frame_id" type="string" value="plate_top_link"/>
+<!-- respawn="false" output="screen">
+   <param name="calibrate_time" type="bool" value="true"/> 
+   <param name="port" type="string" value="/dev/ttyACM0"/> 
+   <param name="intensity" type="bool" value="false"/>
+   <param name="min_ang" value="-2.356194437"/>   
+   <param name="max_ang" value="2.35619443"/>    
+   <param name="cluster" value="1"/>-->
+   </node>
+
+  <!-- Gmapping demo launch file -->
+
+
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot_rviz_launchers)/rviz/navigation.rviz"/>
+
+  <!-- <include file="$(find turtlebot_navigation)/launch/includes/gmapping.launch.xml"/> -->
+   <include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/> 
+
+
+
+</launch>
+
+
+
+
+
+<!--
+
+roslaunch turtlebot_gazebo turtlebot_world.launch
+roslaunch turtlebot_rviz_launchers view_robot.launch
+roslaunch turtlebot_navigation gmapping.launch.xml
+
+roslaunch turtlebot_teleop keyboard_teleop.launch
+
+rosrun map_server map_saver -f /tmp/my_map
+
+
+export TURTLEBOT_3D_SENSOR="hokuyo"
+
+
+-->

@@ -1,0 +1,8 @@
+prefix=/home/turtlebot/project_ws/install
+
+Name: navigation_pro
+Description: Description of navigation_pro
+Version: 0.0.0
+Cflags: -I/home/turtlebot/project_ws/install/include
+Libs: -L/home/turtlebot/project_ws/install/lib -lcostmap_2d -llayers
+Requires: dynamic_reconfigure

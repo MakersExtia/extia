@@ -1,0 +1,150 @@
+
+the node /laserscan_nodelet_manager publishes to the topic /scan, with message type sensor_msgs/LaserScan, with the following fields:
+
+std_msgs/Header header
+  uint32 seq
+  time stamp
+  string frame_id
+float32 angle_min
+float32 angle_max
+float32 angle_increment
+float32 time_increment
+float32 scan_time
+float32 range_min
+float32 range_max
+float32[] ranges
+float32[] intensities
+
+
+the node /slam_gmapping subscribes to /scan, /tf, /tf_static and publishes to /tf and /map
+
+/map is message type nav_msgs/OccupancyGrid
+
+std_msgs/Header header
+  uint32 seq
+  time stamp
+  string frame_id
+nav_msgs/MapMetaData info
+  time map_load_time
+  float32 resolution
+  uint32 width
+  uint32 height
+  geometry_msgs/Pose origin
+    geometry_msgs/Point position
+      float64 x
+      float64 y
+      float64 z
+    geometry_msgs/Quaternion orientation
+      float64 x
+      float64 y
+      float64 z
+      float64 w
+int8[] data
+
+
+
+
+
+
+
+
+
+localization given by /odom
+message type nav_msgs/Odometry : 
+
+std_msgs/Header header
+  uint32 seq
+  time stamp
+  string frame_id
+string child_frame_id
+geometry_msgs/PoseWithCovariance pose
+  geometry_msgs/Pose pose
+    geometry_msgs/Point position
+      float64 x
+      float64 y
+      float64 z
+    geometry_msgs/Quaternion orientation
+      float64 x
+      float64 y
+      float64 z
+      float64 w
+  float64[36] covariance
+geometry_msgs/TwistWithCovariance twist
+  geometry_msgs/Twist twist
+    geometry_msgs/Vector3 linear
+      float64 x
+      float64 y
+      float64 z
+    geometry_msgs/Vector3 angular
+      float64 x
+      float64 y
+      float64 z
+  float64[36] covariance
+
+
+
+
+
+
+
+
+
+
+
+Goal set at /move_base/goal , type move_base_msgs/MoveBaseActionGoal
+
+std_msgs/Header header
+  uint32 seq
+  time stamp
+  string frame_id
+actionlib_msgs/GoalID goal_id
+  time stamp
+  string id
+move_base_msgs/MoveBaseGoal goal
+  geometry_msgs/PoseStamped target_pose
+    std_msgs/Header header
+      uint32 seq
+      time stamp
+      string frame_id
+    geometry_msgs/Pose pose
+      geometry_msgs/Point position
+        float64 x
+        float64 y
+        float64 z
+      geometry_msgs/Quaternion orientation
+        float64 x
+        float64 y
+        float64 z
+        float64 w
+
+
+Goal at /move_base/current_goal
+geometry_msgs/PoseStamped 
+std_msgs/Header header
+  uint32 seq
+  time stamp
+  string frame_id
+geometry_msgs/Pose pose
+  geometry_msgs/Point position
+    float64 x
+    float64 y
+    float64 z
+  geometry_msgs/Quaternion orientation
+    float64 x
+    float64 y
+    float64 z
+    float64 w
+
+
+
+
+
+
+
+
+
+
+
+
+
+

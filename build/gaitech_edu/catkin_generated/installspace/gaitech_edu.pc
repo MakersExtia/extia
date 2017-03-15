@@ -1,0 +1,8 @@
+prefix=/home/turtlebot/project_ws/install
+
+Name: gaitech_edu
+Description: Description of gaitech_edu
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/turtlebot/project_ws/install/lib 
+Requires: 

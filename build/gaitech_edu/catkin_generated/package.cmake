@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "gaitech_edu")
+set(gaitech_edu_MAINTAINER "ros <ros@todo.todo>")
+set(gaitech_edu_DEPRECATED "")
+set(gaitech_edu_VERSION "0.0.1")
+set(gaitech_edu_BUILD_DEPENDS "pocketsphinx" "roscpp" "tf" "rospy" "sound_play" "std_msgs")
+set(gaitech_edu_RUN_DEPENDS "pocketsphinx" "roscpp" "tf" "rospy" "sound_play" "std_msgs")
+set(gaitech_edu_BUILDTOOL_DEPENDS "catkin")
